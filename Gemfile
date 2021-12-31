@@ -3,14 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem 'jquery-rails', ' 4.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'sdoc', '2.2.0'
+# minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby
+gem 'uglifier', '2.7.2'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -31,6 +33,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
